@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>House keeping book</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
     
 </head>
 <body>
@@ -15,20 +15,45 @@
         <input class='deposit' type="button" value='지출'>
     </div>
     <div class="info">
-        <span>
-            금액
-            <input class='input-money' type="text" placeholder="금액을 입력하세요">
-        </span>
-        <span>
-            내용
-            <input class='input-desc' type="text" placeholder="내용을 입력하세요">
-        </span>
-        <input class='submit-info' type="button" value="확인">
+        <form class='submit-info'>
+            <span>
+                금액
+                <input class='input-money' type="number" placeholder="금액을 입력하세요">
+            </span>
+            <span>
+                내용
+                <input class='input-desc' type="text" placeholder="내용을 입력하세요">
+            </span>
+            <!-- <input class='btn-ok' type="button" value="확인"> -->
+            <input type="submit" value="확인" />
+        </form>
     </div>
-    
-    
+
+    <div class='month-info'>
+        <div>
+            이번 달 총 수입
+            <span class='withdraw-money'></span> 원
+        </div>
+        <div>
+            이번 달 총 지출
+            <span class='deposit-money'></span> 원
+        </div>
+        <div>
+            누계
+            <span class='total-money'></span> 원
+        </div>
+
+    </div>
+
+    <div class='history'>
+        <table border="2">
+            <tr>
+                <td>Date</td> <td>Whom</td> <td>Type</td> <td>Description</td> <td>Money</td>
+            </tr>
+        </table>
+    </div>
 
 
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
